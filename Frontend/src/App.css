@@ -1,0 +1,367 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("/images/hotel-resort.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-container form input,
+.form-container form button {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.form-container form button {
+  background-color: rgb(70, 70, 255);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container form button:hover {
+  background-color: rgb(0, 0, 210);
+}
+
+.form-container h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s, text-shadow 0.3s;
+  font-weight: bold
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: #1e90ff;
+  ;
+
+  text-shadow: 0 0 20px #1e90ff;
+  text-decoration: none;
+  outline: none;
+  font-weight: bold
+}
+
+.navbar button {
+  background-color: rgb(70, 70, 255);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navbar button:hover,
+.navbar button:focus {
+  color: white;
+
+  background-color: rgb(0, 0, 205);
+  text-decoration: none;
+  outline: none;
+
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: black;
+  color: white;
+  margin-top: 40px;
+}
+
+.home-container {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.home-container p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+  font-size: medium;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.home-container h2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+#welcomeHeading {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  animation: softGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes softGlow {
+  from {
+    text-shadow: 0 0 20px lightblue, 0 0 10px darkblue;
+  }
+
+  to {
+    text-shadow: 0 0 10px darkblue, 0 0 20px lightblue;
+  }
+}
+
+.photo-gallery {
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  margin: 2rem auto;
+
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1000px;
+}
+
+.photo-gallery figure {
+  text-align: center;
+  color: white;
+}
+
+.photo-gallery img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.photo-gallery figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.feedback-container {
+  text-align: center;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-container h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.feedback-container textarea {
+  width: 90%;
+  height: 120px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.feedback-container button {
+  padding: 12px 30px;
+  background-color: rgb(70, 70, 255);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-container button:hover {
+  background-color: rgb(0, 0, 205);
+}
+
+
+button {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+
+.room-types-container {
+  padding: 40px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: black;
+}
+
+.room-types-heading {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-top: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+
+.room-card {
+  width: 350px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.room-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.room-card h3 {
+  text-align: center;
+  margin: 15px 0 10px;
+  font-size: 1.25rem;
+  color: #0077cc;
+}
+
+.room-card p {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+
+
+h1,
+h2,
+h3,
+p,
+label {
+  color: #fff;
+
+}
+
+/* Override for white backgrounds */
+.booking-container h2,
+.booking-container p,
+.booking-container label,
+.form-container label,
+.form-container input,
+.form-container button {
+  color: #000;
+}
+
+.booking-container label,
+.form-container label {
+  font-weight: bold;
+}
+
+#daysInput {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#pay {
+  background-color: rgb(70, 70, 255);
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+}
+
+#pay:hover {
+  background-color: rgb(0, 0, 205);
+}
+
+.payment-success {
+  color: rgb(153, 255, 0);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
