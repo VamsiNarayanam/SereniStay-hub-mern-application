@@ -7,10 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
-
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
@@ -19,11 +17,8 @@ mongoose.connect(MONGO_URI, {
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("MongoDB Connection Error:", err));
 
-
 const paymentSchema = new mongoose.Schema({
   amount: Number,
-  days: Number,
-  roomType: String,
   date: { type: Date, default: Date.now }
 });
 const Payment = mongoose.model("Payment", paymentSchema);
@@ -38,20 +33,28 @@ const Rating = mongoose.model("Rating", ratingSchema);
 
 app.post("/api/payment", async (req, res) => {
   try {
-    const { amount, days, roomType } = req.body;
-    if (!amount || !days || !roomType) {
-      return res.status(400).json({ error: "All fields are required" });
+    const { amount } = req.body;
+
+    if (!amount) {
+      return res.status(400).json({ error: "Amount is required" });
     }
 
-    const newPayment = new Payment({ amount, days, roomType });
+
+    const newPayment = new Payment({ amount });
     await newPayment.save();
 
-    res.status(201).json({ message: "Payment recorded successfully" });
+
+    res.status(201).json({
+      amount: amount,
+      orderId: "order_" + Date.now(),
+      currency: "INR"
+    });
   } catch (error) {
     console.error("Payment Error:", error);
     res.status(500).json({ error: "Failed to record payment" });
   }
 });
+
 
 app.post("/api/feedback", async (req, res) => {
   try {
@@ -69,7 +72,6 @@ app.post("/api/feedback", async (req, res) => {
     res.status(500).json({ error: "Failed to submit feedback" });
   }
 });
-
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
