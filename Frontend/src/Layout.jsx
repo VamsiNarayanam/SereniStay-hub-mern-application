@@ -17,8 +17,8 @@ function Layout() {
       <nav className="navbar">
         <Link to="/home">HOME</Link>
         <Link to="/rooms">BOOK A ROOM</Link>
-        <a href="https://radiant-revels-event-application.vercel.app/" target="_blank">RADIENT REVELS</a>
-        <a href="https://planta-feast-recipes-application.vercel.app/" target="_blank">PLANTA RECIPES</a>
+        <a href="https://radient-revels-mern-application.vercel.app/" target="_blank">RADIENT REVELS</a>
+        <a href="https://planta-recipe-mern-application-i87r.vercel.app/" target="_blank">PLANTA RECIPES</a>
         <button onClick={handleLogout}>LOGOUT</button>
       </nav>
       <Outlet />
