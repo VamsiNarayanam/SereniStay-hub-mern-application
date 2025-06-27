@@ -13,7 +13,7 @@ function Home() {
 
     try {
 
-      await axios.post("http://localhost:5000/api/feedback", {
+      await axios.post("https://sereni-stay-hub-mern-application.vercel.app/api/feedback", {
         feedback,
       });
 
