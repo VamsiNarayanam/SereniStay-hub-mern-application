@@ -41,7 +41,7 @@ function Booking() {
         handler: async function (response) {
 
           try {
-            await axios.post("http://localhost:5000/api/payment", {
+            await axios.post("https://sereni-stay-hub-mern-application.vercel.app/api/payment", {
               amount: total,
               roomType: room?.type
             });
